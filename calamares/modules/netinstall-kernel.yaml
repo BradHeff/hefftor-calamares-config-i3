@@ -12,6 +12,20 @@
   selected: false
   packages:
     - linux-lts
+- name: "Linux-hardened kernel without any nvidia"
+  description: "Installs only the linux-hardened kernel"
+  critical: false
+  hidden: false
+  selected: false
+  packages:
+    - linux-hardened
+- name: "Linux-zen kernel without any nvidia"
+  description: "Installs only the linux-zen kernel"
+  critical: false
+  hidden: false
+  selected: false
+  packages:
+    - linux-zen
 - name: "Nvidia with linux kernel"
   description: "Installs nvidia and linux kernel - check Arch wiki nvidia"
   critical: false
@@ -32,26 +46,13 @@
     - nvidia-lts
     - nvidia-settings
     - nvidia-utils
-- name: "Nvidia-390xx with linux kernel"
-  description: "Installs nvidia-390xx and linux kernel - check Arch wiki nvidia"
+- name: "Cuda toolkit"
+  description: "Installs the Cuda Toolkit"
   critical: false
   hidden: false
   selected: false
   packages:
-    - linux
-    - nvidia-390xx
-    - nvidia-390xx-settings
-    - nvidia-390xx-utils
-- name: "Nvidia-390xx with linux-lts kernel"
-  description: "Installs nvidia-390xx-lts and linux-lts kernel - check Arch wiki nvidia"
-  critical: false
-  hidden: false
-  selected: false
-  packages:
-    - linux-lts
-    - nvidia-390xx-lts
-    - nvidia-390xx-settings
-    - nvidia-390xx-utils
+    - cuda
 - name: "Intel-ucode"
   description: "Installs intel-ucode - see Arch wiki microcode"
   critical: false
@@ -66,26 +67,3 @@
   selected: false
   packages:
     - amd-ucode
-- name: "Libre Office Still"
-  description: "Installs libre office still - stable branch - conflicts with fresh"
-  critical: false
-  hidden: false
-  selected: false
-  packages:
-    - libreoffice-still
-- name: "Libre Office Fresh"
-  description: "Installs libre office fresh - feature branch - conflicts with still"
-  critical: false
-  hidden: false
-  selected: false
-  packages:
-    - libreoffice-fresh
-- name: "WPS Office"
-  description: "Installs wps office"
-  critical: false
-  hidden: false
-  selected: false
-  packages:
-    - wps-office
-    - wps-office-mime
-    - ttf-wps-fonts
